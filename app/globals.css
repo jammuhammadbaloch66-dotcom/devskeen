@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/* ── Tailwind v4: Define custom design tokens via @theme ── */
+@theme {
+  /* Custom ds.* color tokens (supporting both camelCase and kebab-case) */
+  --color-ds-emerald: #12A87A;
+  --color-ds-emeraldDark: #0D8A63;
+  --color-ds-emerald-dark: #0D8A63;
+  --color-ds-emeraldLight: #D1FAE5;
+  --color-ds-emerald-light: #D1FAE5;
+  --color-ds-mintBg: #ECFDF5;
+  --color-ds-mint-bg: #ECFDF5;
+  --color-ds-iceBg: #EFF6FF;
+  --color-ds-ice-bg: #EFF6FF;
+  --color-ds-tealDark: #0D262B;
+  --color-ds-teal-dark: #0D262B;
+  --color-ds-slateDark: #0F172A;
+  --color-ds-slate-dark: #0F172A;
+  --color-ds-slateMuted: #64748B;
+  --color-ds-slate-muted: #64748B;
+  --color-ds-warmGray: #F8F9F7;
+  --color-ds-warm-gray: #F8F9F7;
+
+  /* Custom font families */
+  --font-display: "Plus Jakarta Sans", Inter, sans-serif;
+  --font-body: Inter, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* ── CSS Variables for use in arbitrary values ── */
+:root {
+  --ds-emerald: #12A87A;
+  --ds-emerald-bright: #10B981;
+  --ds-teal-dark: #0D262B;
+  --ds-slate-dark: #0F172A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #0F172A;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: "Plus Jakarta Sans", Inter, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+/* ── Kinetic Marquee ── */
+.marquee-wrapper {
+  display: flex;
+  width: max-content;
+  animation: marqueeSlide 26s linear infinite;
+}
+.marquee-wrapper:hover {
+  animation-play-state: paused;
+}
+@keyframes marqueeSlide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Isometric Floating & Pulse Animations ── */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes floatDelayed {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.55; filter: drop-shadow(0 0 12px rgba(16, 185, 129, 0.45)); }
+  50% { opacity: 0.95; filter: drop-shadow(0 0 24px rgba(16, 185, 129, 0.85)); }
+}
+@keyframes dataStream {
+  to { stroke-dashoffset: -24; }
+}
+
+.iso-float { animation: floatSlow 5.5s ease-in-out infinite; }
+.iso-float-delay { animation: floatDelayed 4.5s ease-in-out 1.2s infinite; }
+.iso-glow { animation: pulseGlow 3.5s ease-in-out infinite; }
+.iso-stream-line {
+  stroke-dasharray: 6 6;
+  animation: dataStream 1s linear infinite;
+}
+
+/* ── Case Study Card Surface ── */
+.case-study-surface {
+  background: linear-gradient(125deg, #F0F6FF 0%, #F5FAFF 45%, #ECFDF5 100%);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 20px 50px -20px rgba(15, 23, 42, 0.07);
+}
+
+/* ── Contact Form Gradient Surface ── */
+.contact-gradient-surface {
+  background: linear-gradient(135deg, #E8F1FF 0%, #F1F8FF 50%, #E6FAF3 100%);
+  border: 1px solid rgba(18, 168, 122, 0.12);
+}
+
+/* ── Sticky Stacking Case Study Cards ── */
+@media (min-width: 1024px) {
+  .stack-card-1 { position: sticky; top: 96px; z-index: 10; }
+  .stack-card-2 { position: sticky; top: 120px; z-index: 20; }
+  .stack-card-3 { position: sticky; top: 144px; z-index: 30; }
+}
+
+/* ── Timeline Active Step Styling ── */
+.timeline-node {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.timeline-step.active .timeline-node {
+  background-color: #12A87A;
+  color: #FFFFFF;
+  border-color: #12A87A;
+  box-shadow: 0 0 0 6px rgba(18, 168, 122, 0.15);
+  transform: scale(1.08);
+}
+.timeline-step.active h3 {
+  color: #0F172A;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F8FAFC; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #12A87A; }

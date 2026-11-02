@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Technical SEO Meta Tags -->
+  <title>devskeen | Scale Your Systems Without Scaling Your Costs</title>
+  <meta name="description" content="Most infrastructure wasn't designed for what comes next. devskeen builds data, AI, and cloud systems that scale — so your team can stop firefighting and start shipping." />
+  <meta name="keywords" content="devskeen, cloud infrastructure, data engineering, cost optimization, zero downtime cloud migration, custom software engineering house, scalable systems" />
+  <meta name="author" content="devskeen" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://devskeen.com/" />
+  <meta name="theme-color" content="#10B981" />
+
+  <!-- OpenGraph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://devskeen.com/" />
+  <meta property="og:site_name" content="devskeen" />
+  <meta property="og:title" content="devskeen | Scale Your Systems Without Scaling Your Costs" />
+  <meta property="og:description" content="We build data and cloud systems that scale — cutting infrastructure bills by 50% with sub-500ms performance and zero downtime." />
+  <meta property="og:image" content="https://placehold.co/1200x630/0D262B/10B981?text=devskeen+//+Scale+Your+Systems" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://devskeen.com/" />
+  <meta name="twitter:title" content="devskeen | Scale Your Systems Without Scaling Your Costs" />
+  <meta name="twitter:description" content="We build data and cloud systems that scale — so your team can stop firefighting and start shipping." />
+  <meta name="twitter:image" content="https://placehold.co/1200x630/0D262B/10B981?text=devskeen+//+Scale+Your+Systems" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- GSAP & ScrollTrigger for Sticky Card Stacking, Gauges & Active Timeline -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Complete Technical SEO Structured Data (Organization, ProfessionalService & FAQ) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["Organization", "ProfessionalService"],
+        "@id": "https://devskeen.com/#organization",
+        "name": "devskeen",
+        "url": "https://devskeen.com",
+        "description": "Premier cloud, data, and software engineering house helping companies scale systems without scaling infrastructure costs.",
+        "knowsAbout": [
+          "Cloud Cost Optimization",
+          "Zero-Downtime Cloud Migration",
+          "Data Engineering at Scale",
+          "Custom Software Architecture",
+          "High-Concurrency Systems"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "hello@devskeen.com",
+          "contactType": "sales",
+          "availableLanguage": ["English"]
+        },
+        "sameAs": [
+          "https://linkedin.com/company/devskeen"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ds: {
+              emerald: '#12A87A',
+              emeraldDark: '#0D8A63',
+              emeraldLight: '#D1FAE5',
+              mintBg: '#ECFDF5',
+              iceBg: '#EFF6FF',
+              tealDark: '#0D262B',
+              slateDark: '#0F172A',
+              slateMuted: '#64748B',
+              warmGray: '#F8F9F7'
+            }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --ds-emerald: #12A87A;
+      --ds-emerald-bright: #10B981;
+      --ds-teal-dark: #0D262B;
+      --ds-slate-dark: #0F172A;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #FFFFFF;
+      color: #0F172A;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      letter-spacing: -0.025em;
+    }
+
+    /* Kinetic Marquee inside the Green Banner */
+    .marquee-wrapper {
+      display: flex;
+      width: max-content;
+      animation: marqueeSlide 26s linear infinite;
+    }
+    .marquee-wrapper:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marqueeSlide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Isometric 3D Floating & Pulse Animations */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes floatDelayed {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.55; filter: drop-shadow(0 0 12px rgba(16, 185, 129, 0.45)); }
+      50% { opacity: 0.95; filter: drop-shadow(0 0 24px rgba(16, 185, 129, 0.85)); }
+    }
+    @keyframes dataStream {
+      to { stroke-dashoffset: -24; }
+    }
+
+    .iso-float {
+      animation: floatSlow 5.5s ease-in-out infinite;
+    }
+    .iso-float-delay {
+      animation: floatDelayed 4.5s ease-in-out 1.2s infinite;
+    }
+    .iso-glow {
+      animation: pulseGlow 3.5s ease-in-out infinite;
+    }
+    .iso-stream-line {
+      stroke-dasharray: 6 6;
+      animation: dataStream 1s linear infinite;
+    }
+
+    /* Case Study Soft Ice-Mint Gradient Surface */
+    .case-study-surface {
+      background: linear-gradient(125deg, #F0F6FF 0%, #F5FAFF 45%, #ECFDF5 100%);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      box-shadow: 0 20px 50px -20px rgba(15, 23, 42, 0.07);
+    }
+
+    /* Contact Form Gradient Surface */
+    .contact-gradient-surface {
+      background: linear-gradient(135deg, #E8F1FF 0%, #F1F8FF 50%, #E6FAF3 100%);
+      border: 1px solid rgba(18, 168, 122, 0.12);
+    }
+
+    /* Sticky Stacking Effect for Case Studies */
+    @media (min-width: 1024px) {
+      .stack-card-1 { position: sticky; top: 96px; z-index: 10; }
+      .stack-card-2 { position: sticky; top: 120px; z-index: 20; }
+      .stack-card-3 { position: sticky; top: 144px; z-index: 30; }
+    }
+
+    /* Timeline Step Active Styling */
+    .timeline-node {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .timeline-step.active .timeline-node {
+      background-color: #12A87A;
+      color: #FFFFFF;
+      border-color: #12A87A;
+      box-shadow: 0 0 0 6px rgba(18, 168, 122, 0.15);
+      transform: scale(1.08);
+    }
+    .timeline-step.active h3 {
+      color: #0F172A;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F8FAFC;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #12A87A;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-900 selection:bg-emerald-500/20 selection:text-emerald-900">
+
+  <!-- ==========================================================================
+       1. STICKY MINIMALIST HEADER (LEFT-ALIGNED ARCHITECTURAL GRID)
+       ========================================================================== -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+    <div class="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
+      
+      <!-- Left: Brand + Left-Aligned Navigation -->
+      <div class="flex items-center gap-12">
+        <a href="#hero" class="flex items-center gap-2.5 group focus:outline-none" aria-label="devskeen Home">
+          <svg class="w-8 h-8 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Back Tall Block -->
+            <path d="M6 6C6 4.89543 6.89543 4 8 4H16C17.1046 4 18 4.89543 18 6V26C18 27.1046 17.1046 28 16 28H8C6.89543 28 6 27.1046 6 26V6Z" fill="#0D6E52"/>
+            <!-- Front Overlapping Mint Block -->
+            <path d="M15 13C15 11.8954 15.8954 11 17 11H27C28.1046 11 29 11.8954 29 13V30C29 31.1046 28.1046 32 27 32H17C15.8954 32 15 31.1046 15 30V13Z" fill="#34D399"/>
+            <!-- Intersection Highlight -->
+            <path d="M15 13C15 11.8954 15.8954 11 17 11H18V28H15V13Z" fill="#10B981"/>
+          </svg>
+          <span class="font-display font-bold text-xl tracking-tight text-slate-900">devskeen</span>
+        </a>
+
+        <!-- Left-Aligned Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600" aria-label="Primary Navigation">
+          <a href="#stakes" class="hover:text-ds-emerald transition-colors">Why It Matters</a>
+          <a href="#results" class="hover:text-ds-emerald transition-colors">Case Studies</a>
+          <a href="#philosophy" class="hover:text-ds-emerald transition-colors">Approach</a>
+          <a href="#how-it-works" class="hover:text-ds-emerald transition-colors">How It Works</a>
+          <a href="#endorsements" class="hover:text-ds-emerald transition-colors">Endorsements</a>
+        </nav>
+      </div>
+
+      <!-- Right: Status Indicator + Rounded Pill "Contact Us" Button -->
+      <div class="flex items-center gap-5">
+        <div class="hidden lg:flex items-center gap-2 text-xs font-mono text-slate-500">
+          <span class="w-2 h-2 rounded-full bg-ds-emerald animate-pulse"></span>
+          <span>SYS_READY // Q4 SLOTS</span>
+        </div>
+        <a href="#contact" class="px-6 py-2.5 rounded-full bg-ds-emerald hover:bg-ds-emeraldDark text-white font-display font-semibold text-sm shadow-sm hover:shadow-emerald-500/25 hover:shadow-lg transition-all active:scale-95">
+          Contact Us
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         2. LEFT-ALIGNED ASYMMETRIC HERO SECTION + 3D ISOMETRIC CLOUD CLUSTER
+         ========================================================================== -->
+    <section id="hero" class="relative pt-10 pb-12 lg:pt-16 lg:pb-16 overflow-hidden">
+      <div class="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+          
+          <!-- Left Column: Strictly Left-Aligned Editorial Stack (6 Cols) -->
+          <div class="lg:col-span-6 space-y-7 z-10 text-left">
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-xs font-semibold text-ds-emeraldDark">
+              <span class="w-2 h-2 rounded-full bg-ds-emerald"></span>
+              <span>Cloud, Data &amp; Systems Engineering House</span>
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.6rem] font-bold text-slate-900 leading-[1.08] tracking-tight">
+              Scale Your Systems Without Scaling <span class="font-normal text-ds-emerald">Your Costs.</span>
+            </h1>
+
+            <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl">
+              Most infrastructure wasn't designed for what comes next. We build data and cloud systems that are — so your team can stop firefighting and start shipping.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#contact" class="inline-flex items-center gap-3.5 pl-6 pr-2 py-2 rounded-full bg-slate-900 hover:bg-ds-emerald text-white shadow-sm hover:shadow-md transition-all group">
+                <span class="font-display font-semibold text-sm">Book a Discovery Call</span>
+                <span class="w-9 h-9 rounded-full bg-ds-emerald group-hover:bg-white group-hover:text-slate-900 text-white flex items-center justify-center transition-all">
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </span>
+              </a>
+
+              <a href="#results" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-slate-200 hover:border-slate-400 text-sm font-display font-semibold text-slate-700 transition-colors">
+                <span>See Measurable Results</span>
+              </a>
+            </div>
+
+            <!-- Left-Aligned Architectural Proof Bar -->
+            <div class="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-6 max-w-lg">
+              <div>
+                <div class="font-display font-bold text-xl sm:text-2xl text-slate-900">&lt;50%</div>
+                <div class="text-xs text-slate-500 mt-0.5">Infra Cost Reduction</div>
+              </div>
+              <div>
+                <div class="font-display font-bold text-xl sm:text-2xl text-slate-900">Sub-500ms</div>
+                <div class="text-xs text-slate-500 mt-0.5">Real-Time Latency</div>
+              </div>
+              <div>
+                <div class="font-display font-bold text-xl sm:text-2xl text-slate-900">0%</div>
+                <div class="text-xs text-slate-500 mt-0.5">Migration Downtime</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: 3D Isometric Glass Cloud & Server Infrastructure (6 Cols) -->
+          <div class="lg:col-span-6 flex items-center justify-start lg:justify-end relative py-4" id="hero-iso-container">
+            <!-- Ambient Emerald Backglow -->
+            <div class="absolute right-10 w-80 h-80 rounded-full bg-emerald-400/15 blur-3xl pointer-events-none"></div>
+
+            <!-- High-Detail 3D Isometric Cloud & Server Cluster SVG -->
+            <svg id="hero-iso-svg" class="w-full max-w-[520px] h-auto drop-shadow-2xl transition-transform duration-300 ease-out" viewBox="0 0 500 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="3D Isometric Cloud and Data Infrastructure">
+              <defs>
+                <!-- Isometric Platform Gradients -->
+                <linearGradient id="platTop" x1="100" y1="220" x2="400" y2="360" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#E2F1EC"/>
+                  <stop offset="100%" stop-color="#C5E3D8"/>
+                </linearGradient>
+                <linearGradient id="platSideL" x1="80" y1="280" x2="250" y2="380" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#2D5A62"/>
+                  <stop offset="100%" stop-color="#17373D"/>
+                </linearGradient>
+                <linearGradient id="platSideR" x1="250" y1="380" x2="420" y2="280" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#112A2E"/>
+                  <stop offset="100%" stop-color="#09191C"/>
+                </linearGradient>
+                <!-- Glass Cloud Gradients -->
+                <linearGradient id="cloudGlass" x1="160" y1="70" x2="340" y2="250" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#6EE7B7" stop-opacity="0.78"/>
+                  <stop offset="50%" stop-color="#10B981" stop-opacity="0.55"/>
+                  <stop offset="100%" stop-color="#0F766E" stop-opacity="0.82"/>
+                </linearGradient>
+                <linearGradient id="cloudDepth" x1="180" y1="60" x2="360" y2="240" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#1E3A40"/>
+                  <stop offset="100%" stop-color="#0D2327"/>
+                </linearGradient>
+                <linearGradient id="serverTower" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#3B6978"/>
+                  <stop offset="100%" stop-color="#163038"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Decorative Floating Crosshairs -->
+              <path d="M75 110V126M67 118H83" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+              <path d="M420 95V111M412 103H428" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+
+              <!-- Base Isometric Grid Shadow -->
+              <polygon points="250,395 75,300 250,205 425,300" fill="#0F172A" opacity="0.08" filter="blur(12px)"/>
+
+              <!-- Isometric Base Motherboard Platform -->
+              <polygon points="250,372 85,282 250,192 415,282" fill="url(#platTop)" stroke="#10B981" stroke-width="1" stroke-opacity="0.4"/>
+              <polygon points="85,282 250,372 250,388 85,298" fill="url(#platSideL)"/>
+              <polygon points="415,282 250,372 250,388 415,298" fill="url(#platSideR)"/>
+
+              <!-- Glowing Isometric Data Conduit Lines on Platform -->
+              <path d="M165 285 L220 255" stroke="#10B981" stroke-width="2.5" class="iso-stream-line"/>
+              <path d="M285 255 L345 288" stroke="#10B981" stroke-width="2.5" class="iso-stream-line"/>
+              <path d="M250 295 L205 322" stroke="#059669" stroke-width="2" class="iso-stream-line"/>
+              <path d="M265 302 L310 328" stroke="#10B981" stroke-width="2" class="iso-stream-line"/>
+
+              <!-- Left Server Rack Stack 1 -->
+              <g class="iso-float">
+                <polygon points="135,235 100,254 135,273 170,254" fill="#7DD3FC"/>
+                <polygon points="100,254 135,273 135,315 100,296" fill="#295264"/>
+                <polygon points="170,254 135,273 135,315 170,296" fill="#15323C"/>
+                <!-- Server LED Strips -->
+                <line x1="108" y1="268" x2="128" y2="279" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="108" y1="278" x2="128" y2="289" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="108" y1="288" x2="128" y2="299" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+
+              <!-- Back Left Server Tower 2 -->
+              <g class="iso-float-delay">
+                <polygon points="185,195 155,212 185,229 215,212" fill="#A7F3D0"/>
+                <polygon points="155,212 185,229 185,278 155,261" fill="#234E52"/>
+                <polygon points="215,212 185,229 185,278 215,261" fill="#132E32"/>
+                <line x1="162" y1="226" x2="178" y2="235" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                <line x1="162" y1="236" x2="178" y2="245" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+              </g>
+
+              <!-- CENTERPIECE: 3D Translucent Isometric Glass Cloud -->
+              <g class="iso-float">
+                <!-- Back 3D Extrusion of Cloud (Dark Slate/Teal) -->
+                <path d="M205 198 L335 268 C362 282 385 262 385 232 C385 208 368 188 348 185 C345 142 312 112 275 125 C252 95 210 105 202 142 C182 142 172 178 205 198 Z" fill="url(#cloudDepth)" transform="translate(14, -10)"/>
+                
+                <!-- Front Frosted Emerald Glass Cloud -->
+                <path d="M205 198 L335 268 C362 282 385 262 385 232 C385 208 368 188 348 185 C345 142 312 112 275 125 C252 95 210 105 202 142 C182 142 172 178 205 198 Z" fill="url(#cloudGlass)" stroke="#A7F3D0" stroke-width="2"/>
+
+                <!-- Internal Cloud Circuit Traces & Nodes -->
+                <path d="M235 175 L265 192 L265 222" stroke="#ECFDF5" stroke-width="2" stroke-linecap="round"/>
+                <path d="M265 192 L305 175 L330 190" stroke="#ECFDF5" stroke-width="2" stroke-linecap="round"/>
+                <path d="M285 148 L285 182 L318 202" stroke="#6EE7B7" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="235" cy="175" r="4.5" fill="#FFFFFF"/>
+                <circle cx="265" cy="192" r="5.5" fill="#34D399" stroke="#FFFFFF" stroke-width="1.5"/>
+                <circle cx="305" cy="175" r="4.5" fill="#FFFFFF"/>
+                <circle cx="285" cy="148" r="4.5" fill="#A7F3D0"/>
+                <circle cx="330" cy="190" r="4.5" fill="#FFFFFF"/>
+                <circle cx="318" cy="202" r="4.5" fill="#6EE7B7"/>
+              </g>
+
+              <!-- Front Database Cylinder Stack (Left-Center) -->
+              <g class="iso-float-delay">
+                <ellipse cx="220" cy="312" rx="26" ry="13" fill="#16353D"/>
+                <path d="M194 282 V312 C194 319 206 325 220 325 C234 325 246 319 246 312 V282 Z" fill="#285866"/>
+                <ellipse cx="220" cy="282" rx="26" ry="13" fill="#93C5FD" stroke="#E0F2FE" stroke-width="1.5"/>
+                <!-- Cylinder Rings -->
+                <path d="M194 292 C194 299 206 305 220 305 C234 305 246 299 246 292" stroke="#34D399" stroke-width="2" fill="none"/>
+                <path d="M194 302 C194 309 206 315 220 315 C234 315 246 309 246 302" stroke="#38BDF8" stroke-width="2" fill="none"/>
+              </g>
+
+              <!-- Front Right Server Cluster Block -->
+              <g class="iso-float">
+                <polygon points="315,285 280,304 315,323 350,304" fill="#6EE7B7"/>
+                <polygon points="280,304 315,323 315,356 280,337" fill="#1F4850"/>
+                <polygon points="350,304 315,323 315,356 350,337" fill="#102A30"/>
+                <line x1="288" y1="316" x2="308" y2="327" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="288" y1="326" x2="308" y2="337" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+
+              <!-- Far Right Secondary Node -->
+              <g>
+                <polygon points="368,262 344,275 368,288 392,275" fill="#BAE6FD"/>
+                <polygon points="344,275 368,288 368,318 344,305" fill="#28515E"/>
+                <polygon points="392,275 368,288 368,318 392,305" fill="#142E36"/>
+              </g>
+            </svg>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. ROUNDED EMERALD MARQUEE BANNER + LEFT-ALIGNED PARTNER BAR
+         ========================================================================== -->
+    <section aria-label="Partnering Companies" class="px-4 sm:px-8 lg:px-12 pb-16">
+      <div class="max-w-[1360px] mx-auto rounded-[32px] bg-gradient-to-b from-[#12A87A] to-[#0E8F67] text-white pt-10 pb-10 overflow-hidden shadow-xl relative">
+        
+        <!-- Giant Scrolling Marquee Text -->
+        <div class="marquee-wrapper select-none pb-8 border-b border-white/20">
+          <div class="flex items-center gap-10 shrink-0 px-4">
+            <span class="font-display font-bold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-emerald-100/80">
+              Growth shouldn't break your systems.
+            </span>
+            <span class="text-3xl sm:text-5xl text-emerald-200/70">•</span>
+            <span class="font-display font-bold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-emerald-100/80">
+              Growth shouldn't break your systems.
+            </span>
+            <span class="text-3xl sm:text-5xl text-emerald-200/70">•</span>
+          </div>
+          <div class="flex items-center gap-10 shrink-0 px-4" aria-hidden="true">
+            <span class="font-display font-bold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-emerald-100/80">
+              Growth shouldn't break your systems.
+            </span>
+            <span class="text-3xl sm:text-5xl text-emerald-200/70">•</span>
+            <span class="font-display font-bold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-emerald-100/80">
+              Growth shouldn't break your systems.
+            </span>
+            <span class="text-3xl sm:text-5xl text-emerald-200/70">•</span>
+          </div>
+        </div>
+
+        <!-- Left-Aligned 12-Column Partner Split -->
+        <div class="px-6 sm:px-10 lg:px-14 pt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-4 text-left border-l-2 border-emerald-200/60 pl-4">
+            <p class="text-xs uppercase font-mono tracking-widest text-emerald-200 mb-1">Trusted Production Partners</p>
+            <p class="text-sm sm:text-base font-medium text-white">
+              Partnering with high-growth companies to build systems that scale.
+            </p>
+          </div>
+
+          <div class="lg:col-span-8 flex flex-wrap items-center justify-start lg:justify-between gap-8 sm:gap-10 opacity-95">
+            <!-- DISCOVR -->
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg border-2 border-white flex items-center justify-center font-display font-extrabold text-sm">D</div>
+              <span class="font-mono text-xs tracking-widest uppercase font-semibold">DISCOVR</span>
+            </div>
+            <!-- E&Z -->
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold">~</span>
+              <span class="font-display font-extrabold text-2xl tracking-wider">E&amp;Z</span>
+            </div>
+            <!-- BIG BRO -->
+            <div class="flex items-center gap-2">
+              <i data-lucide="cloud-lightning" class="w-6 h-6"></i>
+              <span class="font-mono text-xs tracking-widest uppercase font-semibold">BIG BRO</span>
+            </div>
+            <!-- statrankings -->
+            <div class="flex items-center gap-2">
+              <i data-lucide="bar-chart-2" class="w-5 h-5"></i>
+              <span class="font-display font-bold text-base tracking-tight">statrankings</span>
+            </div>
+            <!-- Spikeel -->
+            <div class="flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+              <span class="font-display font-bold text-base">Spikeel</span>
+            </div>
+            <!-- DAILY EDGE SPORTS -->
+            <div class="flex items-center gap-1.5 font-display font-extrabold text-sm tracking-wider uppercase">
+              <span>DAILY EDGE</span>
+              <span class="px-1.5 py-0.5 bg-white text-ds-emerald rounded text-xs">DE</span>
+              <span>SPORTS</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. "WHAT'S REALLY AT STAKE" — LEFT-ALIGNED ASYMMETRIC SPLIT
+         ========================================================================== -->
+    <section id="stakes" class="py-16 lg:py-24 max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12 text-left">
+      
+      <!-- Top Editorial Split Header -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pb-12 border-b border-slate-200/80">
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200/80 text-xs font-medium text-slate-600">
+            <span class="w-2 h-2 rounded-full bg-ds-emerald"></span>
+            <span>What's Really at Stake</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold tracking-tight leading-[1.12]">
+            <span class="text-slate-900 block">Every Month You Wait,</span>
+            <span class="text-ds-emerald block mt-1">The Problem Gets More Expensive.</span>
+          </h2>
+        </div>
+
+        <div class="lg:col-span-5">
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            Technical debt compounds silently until traffic spikes or cloud invoices force an emergency. We eliminate the underlying architectural bottlenecks before they stall your roadmap.
+          </p>
+        </div>
+      </div>
+
+      <!-- Main 12-Column Asymmetric Split: Left 3 Pain Pillars / Right 3D Isometric Processor -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center pt-12">
+        
+        <!-- Left 6 Columns: 3 Left-Aligned Architectural Pain Rows -->
+        <div class="lg:col-span-6 space-y-5">
+          <!-- Pillar 1 -->
+          <div class="p-6 sm:p-7 rounded-2xl bg-slate-50/90 border-l-4 border-l-ds-emerald border border-slate-200/70 hover:bg-white hover:shadow-lg transition-all">
+            <div class="flex items-center justify-between mb-2.5">
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs font-semibold text-ds-emerald">01 // COST</span>
+                <h3 class="font-display font-bold text-xl text-slate-900">Runaway Costs</h3>
+              </div>
+              <span class="w-8 h-8 rounded-lg bg-emerald-100 text-ds-emerald flex items-center justify-center shrink-0">
+                <i data-lucide="trending-up" class="w-4 h-4"></i>
+              </span>
+            </div>
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              Cloud bills scaling 2–3x faster than customer growth due to unoptimized queries, over-provisioned clusters, and band-aid architecture.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="p-6 sm:p-7 rounded-2xl bg-slate-50/90 border-l-4 border-l-ds-emerald border border-slate-200/70 hover:bg-white hover:shadow-lg transition-all">
+            <div class="flex items-center justify-between mb-2.5">
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs font-semibold text-ds-emerald">02 // VELOCITY</span>
+                <h3 class="font-display font-bold text-xl text-slate-900">Endless Firefighting</h3>
+              </div>
+              <span class="w-8 h-8 rounded-lg bg-emerald-100 text-ds-emerald flex items-center justify-center shrink-0">
+                <i data-lucide="flame" class="w-4 h-4"></i>
+              </span>
+            </div>
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              Your best engineers spend every week patching brittle pipelines and fixing production alerts instead of shipping revenue-driving features.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="p-6 sm:p-7 rounded-2xl bg-slate-50/90 border-l-4 border-l-ds-emerald border border-slate-200/70 hover:bg-white hover:shadow-lg transition-all">
+            <div class="flex items-center justify-between mb-2.5">
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs font-semibold text-ds-emerald">03 // RELIABILITY</span>
+                <h3 class="font-display font-bold text-xl text-slate-900">Breaking Under Load</h3>
+              </div>
+              <span class="w-8 h-8 rounded-lg bg-emerald-100 text-ds-emerald flex items-center justify-center shrink-0">
+                <i data-lucide="zap-off" class="w-4 h-4"></i>
+              </span>
+            </div>
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              Unpredictable traffic spikes and enterprise client onboarding trigger cascading timeouts, slow dashboards, and customer churn.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 6 Columns: 3D Isometric Processor Base with Glowing "$" Cloud -->
+        <div class="lg:col-span-6 relative rounded-[28px] bg-[#F8F9F6] border border-slate-200/70 p-6 sm:p-10 flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-0 bg-emerald-500/10 blur-3xl rounded-full scale-75 pointer-events-none"></div>
+
+          <svg class="w-full max-w-[520px] h-auto relative z-10" viewBox="0 0 560 350" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="3D Isometric Cloud Cost Processor">
+            <defs>
+              <linearGradient id="chipBaseTop" x1="120" y1="160" x2="440" y2="310" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#D5EBE4"/>
+                <stop offset="100%" stop-color="#99C7B9"/>
+              </linearGradient>
+              <linearGradient id="chipDarkL" x1="80" y1="220" x2="280" y2="330" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#29525A"/>
+                <stop offset="100%" stop-color="#132A2F"/>
+              </linearGradient>
+              <linearGradient id="chipDarkR" x1="280" y1="330" x2="480" y2="220" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#0E2226"/>
+                <stop offset="100%" stop-color="#071316"/>
+              </linearGradient>
+              <linearGradient id="dollarCloudGlass" x1="190" y1="40" x2="370" y2="210" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#6EE7B7" stop-opacity="0.8"/>
+                <stop offset="50%" stop-color="#10B981" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#0D9488" stop-opacity="0.85"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Drop Shadow -->
+            <polygon points="280,342 85,245 280,148 475,245" fill="#0F172A" opacity="0.14" filter="blur(14px)"/>
+
+            <!-- Isometric Main Hardware Board -->
+            <polygon points="280,318 95,224 280,130 465,224" fill="url(#chipBaseTop)" stroke="#10B981" stroke-width="1" stroke-opacity="0.4"/>
+            <polygon points="95,224 280,318 280,336 95,242" fill="url(#chipDarkL)"/>
+            <polygon points="465,224 280,318 280,336 465,242" fill="url(#chipDarkR)"/>
+
+            <!-- Corner Isometric Anchor Blocks (4 Hardware Nodes) -->
+            <polygon points="135,190 90,213 135,236 180,213" fill="#487580"/>
+            <polygon points="90,213 135,236 135,260 90,237" fill="#23434B"/>
+            <polygon points="180,213 135,236 135,260 180,237" fill="#11272C"/>
+
+            <polygon points="425,190 380,213 425,236 470,213" fill="#487580"/>
+            <polygon points="380,213 425,236 425,260 380,237" fill="#23434B"/>
+            <polygon points="470,213 425,236 425,260 470,237" fill="#11272C"/>
+
+            <polygon points="335,262 290,285 335,308 380,285" fill="#3B6973"/>
+            <polygon points="290,285 335,308 335,332 290,309" fill="#1B3940"/>
+            <polygon points="380,285 335,308 335,332 380,309" fill="#0B1E22"/>
+
+            <!-- Inner Glowing Processor Socket Pad -->
+            <polygon points="280,256 185,208 280,160 375,208" fill="#E6F7F2" stroke="#34D399" stroke-width="2"/>
+            <!-- Glowing Circuit Pins -->
+            <path d="M220 226 L195 239 M240 236 L215 249 M260 246 L235 259" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M340 226 L365 239 M320 236 L345 249 M300 246 L325 259" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+
+            <!-- Floating 3D Glass Cloud with Glowing "$" Symbol -->
+            <g class="iso-float">
+              <path d="M215 162 L335 224 C360 236 382 218 382 190 C382 168 366 150 348 146 C345 106 314 78 278 90 C256 62 218 72 210 106 C192 106 182 142 215 162 Z" fill="#132E35" transform="translate(12, -10)"/>
+              <path d="M215 162 L335 224 C360 236 382 218 382 190 C382 168 366 150 348 146 C345 106 314 78 278 90 C256 62 218 72 210 106 C192 106 182 142 215 162 Z" fill="url(#dollarCloudGlass)" stroke="#A7F3D0" stroke-width="2"/>
+              <text x="275" y="168" text-anchor="middle" fill="#FFFFFF" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="64" class="iso-glow">$</text>
+            </g>
+          </svg>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==========================================================================
+         5. "REAL PROBLEMS. MEASURABLE RESULTS" — LEFT-ALIGNED STACKING CARDS
+         ========================================================================== -->
+    <section id="results" class="py-16 lg:py-24 max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12 text-left">
+      
+      <!-- Left-Aligned Split Section Header -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pb-12 mb-12 border-b border-slate-200/80">
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200/80 text-xs font-medium text-slate-600">
+            <span class="w-2 h-2 rounded-full bg-ds-emerald"></span>
+            <span>Real Systems. Real Scale</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold tracking-tight leading-tight">
+            <span class="text-slate-900">Real Problems. </span>
+            <span class="text-ds-emerald">Measurable Results.</span>
+          </h2>
+        </div>
+        <div class="lg:col-span-5">
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            Every engagement below involved a data-heavy platform under real-world pressure. The problems — and the solutions — apply across industries.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stacking Case Study Cards Container -->
+      <div class="space-y-10 relative">
+
+        <!-- CASE STUDY CARD 1: Same Performance. Half the Bill. -->
+        <article class="stack-card-1 case-study-surface rounded-[28px] p-6 sm:p-10 transition-all">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left Visual: <50% Gauge Card inside Dark Navy Frame -->
+            <div class="lg:col-span-5">
+              <div class="rounded-2xl bg-[#113247] p-6 sm:p-8 shadow-inner flex items-center justify-between relative overflow-hidden">
+                <div class="bg-white/95 backdrop-blur-md rounded-xl p-6 w-full text-left shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <div>
+                    <span class="font-mono text-[11px] uppercase tracking-wider text-ds-emerald font-semibold block">Cost Delta</span>
+                    <div class="font-display font-extrabold text-4xl text-slate-900 mt-1">&lt;50%</div>
+                    <span class="text-xs font-medium text-slate-500 block mt-1">Monthly Infrastructure Bill</span>
+                  </div>
+                  <!-- Semi-Circular SVG Gauge -->
+                  <svg class="w-36 h-24 shrink-0 overflow-visible" viewBox="0 0 200 110">
+                    <path d="M 20 95 A 80 80 0 0 1 180 95" fill="none" stroke="#E2E8F0" stroke-width="16" stroke-linecap="round"/>
+                    <path d="M 20 95 A 80 80 0 0 1 100 15" fill="none" stroke="#10B981" stroke-width="16" stroke-linecap="round"/>
+                    <circle cx="100" cy="15" r="7" fill="#FFFFFF" stroke="#10B981" stroke-width="4"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="lg:col-span-7 space-y-5 text-left">
+              <div class="inline-flex items-center gap-2 text-xs font-semibold text-ds-emerald">
+                <span class="w-1.5 h-1.5 rounded-full bg-ds-emerald"></span>
+                <span>Cost Optimization · Infrastructure</span>
+              </div>
+
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">
+                Same Performance. Half the Bill.
+              </h3>
+
+              <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                A real-time platform handling unpredictable traffic spikes and multiple simultaneous data sources — running at over 2x the necessary infrastructure cost. We delivered a full platform upgrade that cut spending by 50% with sub-500ms response times.
+              </p>
+
+              <!-- Bottom Metrics Divider -->
+              <div class="pt-4 border-t border-slate-200/80 grid grid-cols-2 gap-6">
+                <div>
+                  <div class="font-display text-lg sm:text-xl font-bold text-slate-900">&lt;50% Infrastructure</div>
+                  <div class="text-xs text-slate-500 mt-0.5">Monthly cloud spend reduction</div>
+                </div>
+                <div>
+                  <div class="font-display text-lg sm:text-xl font-bold text-slate-900">Sub-500ms</div>
+                  <div class="text-xs text-slate-500 mt-0.5">Real-time query response</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- CASE STUDY CARD 2: Legacy System to Modern Cloud -->
+        <article class="stack-card-2 case-study-surface rounded-[28px] p-6 sm:p-10 transition-all">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left Visual: Zero Downtime + 30% Growth Chart -->
+            <div class="lg:col-span-5">
+              <div class="rounded-2xl bg-white/80 border border-slate-200/70 p-6 sm:p-7 shadow-sm relative overflow-hidden">
+                <!-- Floating Top Badge -->
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#113247] text-white text-xs font-semibold mb-4 shadow-sm">
+                  <i data-lucide="activity" class="w-3.5 h-3.5 text-emerald-400"></i>
+                  <span>Zero Downtime</span>
+                </div>
+
+                <!-- Growth Curve SVG -->
+                <div class="relative pt-2">
+                  <div class="absolute right-2 top-0 px-2.5 py-1 rounded-full bg-ds-emerald text-white font-display font-bold text-xs shadow">
+                    30% Growth
+                  </div>
+                  <svg class="w-full h-36" viewBox="0 0 280 120" fill="none">
+                    <defs>
+                      <linearGradient id="growthGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#10B981" stop-opacity="0.35"/>
+                        <stop offset="100%" stop-color="#10B981" stop-opacity="0.0"/>
+                      </linearGradient>
+                    </defs>
+                    <path d="M10 105 Q 80 95, 140 65 T 260 20 L 260 115 L 10 115 Z" fill="url(#growthGrad)"/>
+                    <path d="M10 105 Q 80 95, 140 65 T 260 20" stroke="#10B981" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+                    <circle cx="260" cy="20" r="6" fill="#FFFFFF" stroke="#10B981" stroke-width="3.5"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="lg:col-span-7 space-y-5">
+              <div class="inline-flex items-center gap-2 text-xs font-semibold text-ds-emerald">
+                <span class="w-1.5 h-1.5 rounded-full bg-ds-emerald"></span>
+                <span>Cloud Migration · Zero Downtime</span>
+              </div>
+
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">
+                Legacy System to Modern Cloud — Without Missing a Beat.
+              </h3>
+
+              <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                A fast-growing platform was held back by aging architecture and manual deployments. We migrated them to modern cloud infrastructure while the business kept running — zero downtime, zero data loss.
+              </p>
+
+              <!-- Bottom Metrics Divider -->
+              <div class="pt-4 border-t border-slate-200/80 grid grid-cols-2 gap-6">
+                <div>
+                  <div class="font-display text-lg sm:text-xl font-bold text-slate-900">Zero Downtime</div>
+                  <div class="text-xs text-slate-500 mt-0.5">Seamless live cutover</div>
+                </div>
+                <div>
+                  <div class="font-display text-lg sm:text-xl font-bold text-slate-900">Zero Data Loss</div>
+                  <div class="text-xs text-slate-500 mt-0.5">Automated CI/CD pipelines</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- CASE STUDY CARD 3: 26 Years of Data. Under $600 a Month. -->
+        <article class="stack-card-3 case-study-surface rounded-[28px] p-6 sm:p-10 transition-all">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left Visual: <2 Seconds Node Diagram (Exact Video Match) -->
+            <div class="lg:col-span-5">
+              <div class="rounded-2xl bg-white border border-slate-200/80 p-6 shadow-sm relative">
+                <!-- Top Floating Pill -->
+                <div class="flex justify-end mb-2">
+                  <span class="px-3 py-1 rounded-md bg-[#113247] text-white text-[11px] font-semibold">
+                    26+ years of data
+                  </span>
+                </div>
+
+                <!-- Center <2 Seconds Ring + Connected Nodes -->
+                <div class="py-3 flex items-center justify-between gap-6 relative px-2">
+                  <div class="text-left">
+                    <div class="font-mono text-xs text-slate-400 uppercase">Query Latency</div>
+                    <div class="font-display font-extrabold text-2xl text-slate-900 mt-0.5">&lt;2 Seconds</div>
+                    <div class="text-xs text-slate-500 mt-1">400+ metrics per record</div>
+                  </div>
+                  <div class="w-24 h-24 rounded-full border-[6px] border-slate-100 flex flex-col items-center justify-center relative shadow-inner shrink-0">
+                    <svg class="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="44" stroke="#113247" stroke-width="7" fill="none" stroke-dasharray="220" stroke-dashoffset="45" stroke-linecap="round"/>
+                    </svg>
+                    <span class="w-2 h-2 rounded-full bg-ds-emerald mb-1"></span>
+                    <span class="font-display font-extrabold text-xs text-slate-900">1.4s avg</span>
+                  </div>
+                </div>
+
+                <!-- Bottom Pill Badge -->
+                <div class="flex justify-start mt-2">
+                  <span class="px-3 py-1 rounded-md bg-ds-emerald text-white text-[11px] font-semibold">
+                    Production-ready
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="lg:col-span-7 space-y-5">
+              <div class="inline-flex items-center gap-2 text-xs font-semibold text-ds-emerald">
+                <span class="w-1.5 h-1.5 rounded-full bg-ds-emerald"></span>
+                <span>Data Engineering · Scale</span>
+              </div>
+
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">
+                26 Years of Data. Under $600 a Month.
+              </h3>
+
+              <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                The platform needed to ingest and process 26 years of historical data and 400+ metrics per record — on a startup budget, competing against well-funded incumbents. We built dual cloud environments that deliver sub-2-second load times for under $600/month.
+              </p>
+
+              <!-- Bottom Metrics Divider -->
+              <div class="pt-4 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div>
+                  <div class="font-display text-lg font-bold text-slate-900">26+ Years</div>
+                  <div class="text-xs text-slate-500">of data processed</div>
+                </div>
+                <div>
+                  <div class="font-display text-lg font-bold text-slate-900">&lt;$600/month</div>
+                  <div class="text-xs text-slate-500">Dual cloud environments</div>
+                </div>
+                <div>
+                  <div class="font-display text-lg font-bold text-slate-900">&lt;2 Seconds</div>
+                  <div class="text-xs text-slate-500">Full site load time</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. "WHY DEVSKEEN" — LEFT-ALIGNED ROOT CAUSE ARCHITECTURE
+         ========================================================================== -->
+    <section id="philosophy" class="py-16 lg:py-24 max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12 text-left">
+      
+      <!-- Left-Aligned Section Heading Split -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
+        <div class="lg:col-span-8 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200/80 text-xs font-medium text-slate-600">
+            <span class="w-2 h-2 rounded-full bg-ds-emerald"></span>
+            <span>Why devskeen</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold tracking-tight leading-tight">
+            <span class="text-slate-900 block">Your Technology Problems Started</span>
+            <span class="text-ds-emerald block mt-1">With Good Intentions.</span>
+          </h2>
+        </div>
+        <div class="lg:col-span-4">
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            Fast patches and quick MVPs eventually hit a ceiling. We re-architect the core without halting your daily operations.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2-Column Split Container -->
+      <div class="rounded-[32px] bg-[#F8F9F6] border border-slate-200/60 p-8 sm:p-12 lg:p-14">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left Column: Copy + 3 Checkmark Pills (6 Cols) -->
+          <div class="lg:col-span-6 space-y-6">
+            <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 leading-snug">
+              We Fix the Root Cause, Not the Symptoms
+            </h3>
+
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              Most firms start writing code. We start by learning how your business actually runs — mapping workflows, data flows, and dependencies before touching a single system. Then we design solutions that grow with you.
+            </p>
+
+            <!-- 3 Checkmark Pill Rows -->
+            <div class="space-y-3 pt-1">
+              <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white border border-slate-200/70 shadow-2xs">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-ds-emerald flex items-center justify-center text-xs font-bold shrink-0">✓</span>
+                <span class="text-sm font-medium text-slate-800">No rip-and-replace.</span>
+              </div>
+
+              <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white border border-slate-200/70 shadow-2xs">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-ds-emerald flex items-center justify-center text-xs font-bold shrink-0">✓</span>
+                <span class="text-sm font-medium text-slate-800">No generic tools.</span>
+              </div>
+
+              <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white border border-slate-200/70 shadow-2xs">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-ds-emerald flex items-center justify-center text-xs font-bold shrink-0">✓</span>
+                <span class="text-sm font-medium text-slate-800">Senior engineers who stay accountable long after launch.</span>
+              </div>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-500 pt-2">
+              It's why every client we've ever worked with is still with us.
+            </p>
+          </div>
+
+          <!-- Right Column: 3D Isometric Diagnostic Motherboard & Magnifying Glass (6 Cols) -->
+          <div class="lg:col-span-6 flex justify-center">
+            <svg class="w-full max-w-[460px] h-auto" viewBox="0 0 480 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="3D Isometric Root Cause System Diagnostics">
+              <!-- Floating Isometric Workflow Document Cards (Top Left) -->
+              <g class="iso-float-delay">
+                <polygon points="150,70 105,95 105,155 150,130" fill="#E2F2EE" stroke="#10B981" stroke-width="1"/>
+                <polygon points="185,88 140,113 140,173 185,148" fill="#FFFFFF" stroke="#34D399" stroke-width="1.5"/>
+                <line x1="148" y1="120" x2="175" y2="105" stroke="#10B981" stroke-width="2"/>
+                <line x1="148" y1="132" x2="170" y2="120" stroke="#94A3B8" stroke-width="2"/>
+              </g>
+
+              <!-- Base Isometric Diagnostic Board -->
+              <polygon points="245,335 75,245 245,155 415,245" fill="#173A42" stroke="#10B981" stroke-width="1.5"/>
+              <polygon points="75,245 245,335 245,350 75,260" fill="#0F292F"/>
+              <polygon points="415,245 245,335 245,350 415,260" fill="#08181C"/>
+
+              <!-- Glowing Circuit Grid Inside Board -->
+              <polygon points="245,315 110,245 245,175 380,245" fill="#204E58"/>
+              <path d="M165 245 L245 205 L325 245 L245 285 Z" stroke="#34D399" stroke-width="2" class="iso-stream-line" fill="rgba(16, 185, 129, 0.12)"/>
+
+              <!-- Isometric Server Towers Around Diagnostic Board -->
+              <!-- Top Server -->
+              <polygon points="265,122 238,136 265,150 292,136" fill="#6EE7B7"/>
+              <polygon points="238,136 265,150 265,195 238,181" fill="#1E464E"/>
+              <polygon points="292,136 265,150 265,195 292,181" fill="#0E262B"/>
+
+              <!-- Right Server -->
+              <polygon points="365,165 338,179 365,193 392,179" fill="#6EE7B7"/>
+              <polygon points="338,179 365,193 365,242 338,228" fill="#1E464E"/>
+              <polygon points="392,179 365,193 365,242 392,228" fill="#0E262B"/>
+
+              <!-- Left Bottom Node -->
+              <polygon points="118,262 92,276 118,290 144,276" fill="#5EEAD4"/>
+              <polygon points="92,276 118,290 118,325 92,311" fill="#1E464E"/>
+              <polygon points="144,276 118,290 118,325 144,311" fill="#0E262B"/>
+
+              <!-- Floating Isometric Magnifying Diagnostic Lens Over Center -->
+              <g class="iso-float">
+                <ellipse cx="255" cy="235" rx="46" ry="26" fill="rgba(52, 211, 153, 0.28)" stroke="#A7F3D0" stroke-width="4"/>
+                <ellipse cx="255" cy="230" rx="46" ry="26" fill="rgba(255, 255, 255, 0.35)" stroke="#FFFFFF" stroke-width="2.5"/>
+                <!-- Magnifying Handle -->
+                <path d="M292 246 L332 272" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round"/>
+                <path d="M295 248 L332 272" stroke="#0F172A" stroke-width="5" stroke-linecap="round"/>
+                <!-- Target Reticle Inside Lens -->
+                <circle cx="255" cy="230" r="8" fill="#10B981"/>
+                <circle cx="255" cy="230" r="16" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="3 3"/>
+              </g>
+            </svg>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==========================================================================
+         7. "HOW IT WORKS" — STICKY BLUEPRINT + 5-STEP VERTICAL TIMELINE
+         ========================================================================== -->
+    <section id="how-it-works" class="py-16 lg:py-24 max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12 text-left">
+      
+      <!-- Left-Aligned Section Heading Split -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pb-12 mb-14 border-b border-slate-200/80">
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200/80 text-xs font-medium text-slate-600">
+            <span class="w-2 h-2 rounded-full bg-ds-emerald"></span>
+            <span>How It Works</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold tracking-tight leading-tight">
+            <span class="text-slate-900 block">From Where You Are Now</span>
+            <span class="text-ds-emerald block mt-1">to Where You Need to Be.</span>
+          </h2>
+        </div>
+        <div class="lg:col-span-5">
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            Zero black-box retainers. Every engagement starts with a free 1–2 week architectural discovery where you keep the full written system blueprint.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2-Column Sticky Whiteboard Visual + Scroll-Activated 5-Step Timeline -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Column: Sticky Architecture Whiteboard Session Card (5 Cols) -->
+        <div class="lg:col-span-5 lg:sticky lg:top-28">
+          <div class="rounded-2xl overflow-hidden bg-slate-100 border border-slate-200/80 shadow-lg relative group">
+            <!-- Realistic Whiteboard Architecture Illustration + Live Step Overlay -->
+            <div class="aspect-[4/5] bg-gradient-to-br from-[#F4F6F4] via-[#EAECE9] to-[#DDE2DEC0] p-6 flex flex-col justify-between relative overflow-hidden">
+              
+              <!-- Hand-Drawn Style Architecture Diagram on Whiteboard -->
+              <svg class="w-full h-full opacity-85" viewBox="0 0 340 380" fill="none">
+                <!-- Whiteboard Grid Notes -->
+                <text x="20" y="32" fill="#334155" font-family="JetBrains Mono" font-size="11" font-weight="600">SYS_DISCOVERY // WORKFLOW_MAP</text>
+                <line x1="20" y1="42" x2="310" y2="42" stroke="#94A3B8" stroke-width="1"/>
+
+                <!-- Flowchart Boxes -->
+                <rect x="24" y="65" width="110" height="52" rx="6" fill="#FFFFFF" stroke="#475569" stroke-width="1.8"/>
+                <text x="38" y="88" fill="#0F172A" font-family="Plus Jakarta Sans" font-weight="700" font-size="11">Ingest Layer</text>
+                <text x="38" y="104" fill="#10B981" font-family="JetBrains Mono" font-size="9">400+ metrics/rec</text>
+
+                <path d="M134 91 H195" stroke="#10B981" stroke-width="2" stroke-dasharray="4 4"/>
+                <polygon points="195,87 203,91 195,95" fill="#10B981"/>
+
+                <rect x="205" y="65" width="110" height="52" rx="6" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+                <text x="218" y="88" fill="#0F172A" font-family="Plus Jakarta Sans" font-weight="700" font-size="11">Dual Cloud Core</text>
+                <text x="218" y="104" fill="#64748B" font-family="JetBrains Mono" font-size="9">Zero Downtime</text>
+
+                <!-- Center Architecture Hub -->
+                <circle cx="170" cy="195" r="42" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+                <text x="170" y="192" text-anchor="middle" fill="#0F172A" font-family="Plus Jakarta Sans" font-weight="800" font-size="12">devskeen</text>
+                <text x="170" y="207" text-anchor="middle" fill="#059669" font-family="JetBrains Mono" font-size="9">ROOT_CAUSE_FIX</text>
+
+                <path d="M80 117 L138 165" stroke="#64748B" stroke-width="1.5"/>
+                <path d="M260 117 L202 165" stroke="#10B981" stroke-width="1.8"/>
+
+                <!-- Bottom Latency Target Box -->
+                <rect x="45" y="275" width="250" height="68" rx="10" fill="#0F172A"/>
+                <text x="65" y="302" fill="#34D399" font-family="JetBrains Mono" font-size="10">ACTIVE PHASE DELIVERABLE:</text>
+                <text id="whiteboard-step-label" x="65" y="324" fill="#FFFFFF" font-family="Plus Jakarta Sans" font-weight="700" font-size="14">01. Free 1–2 Week System Mapping</text>
+              </svg>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: 5-Step Vertical Numbered Timeline (7 Cols) -->
+        <div class="lg:col-span-7 relative pl-4 sm:pl-8">
+          <!-- Vertical Connecting Line -->
+          <div class="absolute left-[31px] sm:left-[47px] top-4 bottom-8 w-[2px] bg-slate-200"></div>
+
+          <div class="space-y-12" id="process-timeline">
+            
+            <!-- Step 1 -->
+            <div class="timeline-step active relative flex items-start gap-6" data-step-title="01. Free 1–2 Week System Mapping">
+              <div class="timeline-node w-8 h-8 rounded-full bg-ds-emerald text-white border-2 border-ds-emerald font-display font-bold text-xs flex items-center justify-center shrink-0 relative z-10 mt-1">
+                1
+              </div>
+              <div class="space-y-2">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900">
+                  Discovery
+                </h3>
+                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  We spend 1–2 weeks learning how your business runs. Not just your tech stack — your workflows, your team, your bottlenecks, your goals. We map everything out and document it all. This is free. No commitment. No pressure.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="timeline-step relative flex items-start gap-6" data-step-title="02. Written System Breakdown (Yours to Keep)">
+              <div class="timeline-node w-8 h-8 rounded-full bg-white text-slate-500 border-2 border-slate-300 font-display font-bold text-xs flex items-center justify-center shrink-0 relative z-10 mt-1">
+                2
+              </div>
+              <div class="space-y-2">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-700">
+                  You Walk Away With a Clear Picture
+                </h3>
+                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  At the end of discovery, you get a full written breakdown of your systems — what's working, what's not, and where the biggest opportunities are. This is yours to keep whether you hire us or not. Most companies charge for this. We don't.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="timeline-step relative flex items-start gap-6" data-step-title="03. Transparent Blueprint, Timeline & Cost">
+              <div class="timeline-node w-8 h-8 rounded-full bg-white text-slate-500 border-2 border-slate-300 font-display font-bold text-xs flex items-center justify-center shrink-0 relative z-10 mt-1">
+                3
+              </div>
+              <div class="space-y-2">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-700">
+                  We Design the Solution Together
+                </h3>
+                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  No black boxes. We lay out exactly what we're going to build, how long it will take, and what it will cost. You'll understand every decision — not just what we're doing, but why. Nothing starts until you're confident in the plan.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="timeline-step relative flex items-start gap-6" data-step-title="04. Zero-Disruption Senior Engineering">
+              <div class="timeline-node w-8 h-8 rounded-full bg-white text-slate-500 border-2 border-slate-300 font-display font-bold text-xs flex items-center justify-center shrink-0 relative z-10 mt-1">
+                4
+              </div>
+              <div class="space-y-2">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-700">
+                  Senior Engineers Build It — Without Disrupting Your Business
+                </h3>
+                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  Our team builds your solution while your business keeps running. No downtime. No risky cutovers. We launch when it's ready, not when the clock runs out. You'll have direct access to the people doing the work — not a project manager relaying messages.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="timeline-step relative flex items-start gap-6" data-step-title="05. Long-Term Post-Launch Partnership">
+              <div class="timeline-node w-8 h-8 rounded-full bg-white text-slate-500 border-2 border-slate-300 font-display font-bold text-xs flex items-center justify-center shrink-0 relative z-10 mt-1">
+                5
+              </div>
+              <div class="space-y-2">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-700">
+                  We Don't Disappear After Launch
+                </h3>
+                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  We stick around to make sure everything runs smoothly in the real world and your team is comfortable. But most clients don't stop there. We become the team they call when the business grows and the systems need to grow with it. That's why every client we've worked with is still with us.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. "ENDORSEMENTS" — LEFT-ALIGNED EXECUTIVE TESTIMONIAL CARDS
+         ========================================================================== -->
+    <section id="endorsements" class="py-16 lg:py-24 max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12 text-left">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Left Column: Sticky Title -->
+        <div class="lg:col-span-4 lg:sticky lg:top-28 space-y-4">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-50 border border-slate-200/80 text-xs font-medium text-slate-600">
+            <i data-lucide="message-square" class="w-3.5 h-3.5 text-ds-emerald"></i>
+            <span>Endorsements</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold tracking-tight leading-tight">
+            <span class="text-slate-900 block">What Founders &amp;</span>
+            <span class="text-slate-400 block mt-1">Executives Say</span>
+          </h2>
+          <p class="text-sm text-slate-600 leading-relaxed pt-2">
+            Direct feedback from CEOs, Founders, and CISOs who trusted devskeen with mission-critical cloud and data infrastructure.
+          </p>
+        </div>
+
+        <!-- Right Column: Strictly Left-Aligned Staggered 2-Column Endorsement Cards -->
+        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          <!-- Column 1 of Masonry -->
+          <div class="space-y-6">
+            <!-- Card 1: Kevin Epstein -->
+            <div class="rounded-2xl bg-[#F4F6F8] p-7 text-left border border-slate-200/60 hover:border-ds-emerald/40 hover:shadow-md transition-all flex flex-col justify-between">
+              <p class="text-sm sm:text-base text-slate-700 leading-relaxed mb-6">
+                "They developed highly effective solutions that dramatically improved our system performance [...] wholeheartedly recommend devskeen."
+              </p>
+              <div class="flex items-center gap-3.5 pt-4 border-t border-slate-200/70">
+                <div class="w-11 h-11 rounded-full bg-slate-800 text-white font-display font-bold text-xs flex items-center justify-center shrink-0 shadow-sm">
+                  KE
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-sm text-slate-900">Kevin Epstein</h3>
+                  <p class="text-xs text-slate-500">CEO, E&amp;Z Agency Inc</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Patrik Jonsson -->
+            <div class="rounded-2xl bg-[#F4F6F8] p-7 text-left border border-slate-200/60 hover:border-ds-emerald/40 hover:shadow-md transition-all flex flex-col justify-between">
+              <p class="text-sm sm:text-base text-slate-700 leading-relaxed mb-6">
+                "With a small core team he managed to setup a stable cloud based cost effective platform from scratch."
+              </p>
+              <div class="flex items-center gap-3.5 pt-4 border-t border-slate-200/70">
+                <div class="w-11 h-11 rounded-full bg-ds-emerald text-white font-display font-bold text-sm flex items-center justify-center shrink-0 shadow-sm">
+                  P
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-sm text-slate-900">Patrik Jonsson</h3>
+                  <p class="text-xs text-slate-500">Founding CISO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2 of Masonry (Staggered Offset on Desktop) -->
+          <div class="space-y-6 sm:mt-8">
+            <!-- Card 2: Hamid Kalantari -->
+            <div class="rounded-2xl bg-[#F4F6F8] p-7 text-left border border-slate-200/60 hover:border-ds-emerald/40 hover:shadow-md transition-all flex flex-col justify-between">
+              <p class="text-sm sm:text-base text-slate-700 leading-relaxed mb-6">
+                "Demonstrated exceptional technical skills and leadership qualities... effectively led critical projects and provided clear technical guidance."
+              </p>
+              <div class="flex items-center gap-3.5 pt-4 border-t border-slate-200/70">
+                <div class="w-11 h-11 rounded-full bg-[#648894] text-white font-display font-bold text-sm flex items-center justify-center shrink-0 shadow-sm">
+                  H
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-sm text-slate-900">Hamid Kalantari</h3>
+                  <p class="text-xs text-slate-500">CEO &amp; Founder, Better App</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Olle Frodema -->
+            <div class="rounded-2xl bg-[#F4F6F8] p-7 text-left border border-slate-200/60 hover:border-ds-emerald/40 hover:shadow-md transition-all flex flex-col justify-between">
+              <p class="text-sm sm:text-base text-slate-700 leading-relaxed mb-6">
+                "A great mix of operational understanding and great leadership skills."
+              </p>
+              <div class="flex items-center gap-3.5 pt-4 border-t border-slate-200/70">
+                <div class="w-11 h-11 rounded-full bg-[#0F292F] text-white font-display font-bold text-sm flex items-center justify-center shrink-0 shadow-sm">
+                  O
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-sm text-slate-900">Olle Frodema</h3>
+                  <p class="text-xs text-slate-500">Founder</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. "READY TO CONNECT?" — 12-COLUMN ASYMMETRIC CONTACT SECTION
+         ========================================================================== -->
+    <section id="contact" class="py-16 lg:py-24 max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12 text-left">
+      
+      <!-- Soft Ice-Blue / Mint Gradient Card with 12-Column Split -->
+      <div class="contact-gradient-surface rounded-[32px] p-8 sm:p-12 lg:p-16 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Left 5 Columns: Direct Engineering Pitch & Discovery Checklist -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-emerald-200 text-xs font-semibold text-ds-emeraldDark">
+              <span class="w-2 h-2 rounded-full bg-ds-emerald"></span>
+              <span>Start With Free Discovery</span>
+            </div>
+
+            <h2 class="font-display text-3xl sm:text-5xl font-bold tracking-tight leading-tight">
+              <span class="text-slate-900 block">Ready to</span>
+              <span class="text-ds-emerald block">connect?</span>
+            </h2>
+
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              Drop us a message and a principal engineer will respond within 24 hours. No sales reps, no pressure — just a clear conversation about your architecture.
+            </p>
+
+            <div class="space-y-3 pt-2 border-t border-slate-200/70">
+              <div class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-ds-emerald flex items-center justify-center text-xs font-bold">✓</span>
+                <span>1–2 week free system &amp; workflow discovery</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-ds-emerald flex items-center justify-center text-xs font-bold">✓</span>
+                <span>Written architectural breakdown yours to keep</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-ds-emerald flex items-center justify-center text-xs font-bold">✓</span>
+                <span>Direct access to senior engineers</span>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Direct Engineering Desk</div>
+              <a href="mailto:hello@devskeen.com" class="font-display font-bold text-lg text-slate-900 hover:text-ds-emerald transition-colors">
+                hello@devskeen.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Right 7 Columns: Left-Aligned Intake Form -->
+          <div class="lg:col-span-7">
+            <form id="devskeen-contact-form" class="space-y-5 bg-white/80 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white shadow-sm">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="first-name" class="block text-xs font-semibold text-slate-700 mb-2">First Name *</label>
+                  <input id="first-name" name="firstName" type="text" required placeholder="First Name"
+                    class="w-full px-4 py-3.5 rounded-xl bg-white border border-slate-200/90 text-sm text-slate-900 placeholder:text-slate-400 focus:border-ds-emerald focus:outline-none shadow-2xs transition-colors" />
+                </div>
+                <div>
+                  <label for="last-name" class="block text-xs font-semibold text-slate-700 mb-2">Last Name *</label>
+                  <input id="last-name" name="lastName" type="text" required placeholder="Last Name"
+                    class="w-full px-4 py-3.5 rounded-xl bg-white border border-slate-200/90 text-sm text-slate-900 placeholder:text-slate-400 focus:border-ds-emerald focus:outline-none shadow-2xs transition-colors" />
+                </div>
+              </div>
+
+              <div>
+                <label for="work-email" class="block text-xs font-semibold text-slate-700 mb-2">Work Email *</label>
+                <input id="work-email" name="email" type="email" required placeholder="you@company.com"
+                  class="w-full px-4 py-3.5 rounded-xl bg-white border border-slate-200/90 text-sm text-slate-900 placeholder:text-slate-400 focus:border-ds-emerald focus:outline-none shadow-2xs transition-colors" />
+              </div>
+
+              <div>
+                <label for="project-message" class="block text-xs font-semibold text-slate-700 mb-2">How can we help?</label>
+                <textarea id="project-message" name="message" rows="4" required placeholder="Tell us about your current infrastructure, bottlenecks, or upcoming roadmap..."
+                  class="w-full px-4 py-3.5 rounded-xl bg-white border border-slate-200/90 text-sm text-slate-900 placeholder:text-slate-400 focus:border-ds-emerald focus:outline-none shadow-2xs transition-colors"></textarea>
+              </div>
+
+              <div class="flex items-center justify-between pt-2">
+                <span class="text-xs text-slate-500">Response time: &lt; 24 hours</span>
+                <button type="submit" id="contact-submit-btn" class="px-8 py-3.5 rounded-full bg-ds-emerald hover:bg-ds-emeraldDark text-white font-display font-semibold text-sm shadow-sm hover:shadow-emerald-500/25 hover:shadow-lg transition-all active:scale-95">
+                  Submit Inquiry
+                </button>
+              </div>
+
+              <!-- Non-Alert Confirmation Message Box -->
+              <div id="form-success-banner" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs sm:text-sm font-medium text-left"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       10. OVERSIZED BRAND FOOTER (LEFT-ALIGNED 1360PX CONTAINER)
+       ========================================================================== -->
+  <footer class="bg-white pt-10 pb-14 border-t border-slate-100">
+    <div class="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
+      
+      <!-- Top Row: Oversized devskeen Logo Lockup + LinkedIn Icon -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-12 border-b border-slate-200/80">
+        
+        <a href="#hero" class="flex items-center gap-4 group">
+          <svg class="w-14 h-14 sm:w-16 sm:h-16 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 6C6 4.89543 6.89543 4 8 4H16C17.1046 4 18 4.89543 18 6V26C18 27.1046 17.1046 28 16 28H8C6.89543 28 6 27.1046 6 26V6Z" fill="#0D6E52"/>
+            <path d="M15 13C15 11.8954 15.8954 11 17 11H27C28.1046 11 29 11.8954 29 13V30C29 31.1046 28.1046 32 27 32H17C15.8954 32 15 31.1046 15 30V13Z" fill="#34D399"/>
+            <path d="M15 13C15 11.8954 15.8954 11 17 11H18V28H15V13Z" fill="#10B981"/>
+          </svg>
+          <span class="font-display font-bold text-4xl sm:text-5xl tracking-tight text-slate-900">devskeen</span>
+        </a>
+
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="devskeen LinkedIn"
+          class="w-10 h-10 rounded-lg bg-slate-100 hover:bg-ds-emerald hover:text-white text-slate-600 flex items-center justify-center transition-colors font-display font-bold text-sm">
+          in
+        </a>
+      </div>
+
+      <!-- Bottom Row: Copyright & Legal Links -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div>© 2026 devskeen. All rights reserved.</div>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="#contact" class="hover:text-slate-900 transition-colors">Privacy Policy</a>
+          <a href="#contact" class="hover:text-slate-900 transition-colors">Terms &amp; Conditions</a>
+          <a href="#contact" class="hover:text-slate-900 transition-colors">Cookie Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       11. INTERACTIVITY, GSAP SCROLL ANIMATIONS & TIMELINE CONTROLLER
+       ========================================================================== -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      // 1. Initialize Lucide Icons
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      // 2. Interactive 3D Tilt on Hero Isometric Cloud Illustration
+      const heroContainer = document.getElementById('hero-iso-container');
+      const heroSvg = document.getElementById('hero-iso-svg');
+
+      if (heroContainer && heroSvg) {
+        heroContainer.addEventListener('mousemove', (e) => {
+          const rect = heroContainer.getBoundingClientRect();
+          const x = ((e.clientX - rect.left) / rect.width - 0.5) * 14;
+          const y = ((e.clientY - rect.top) / rect.height - 0.5) * 14;
+          heroSvg.style.transform = `perspective(900px) rotateY(${x}deg) rotateX(${-y}deg)`;
+        });
+
+        heroContainer.addEventListener('mouseleave', () => {
+          heroSvg.style.transform = 'perspective(900px) rotateY(0deg) rotateX(0deg)';
+        });
+      }
+
+      // 3. Scroll-Activated 5-Step Vertical Timeline ("How It Works")
+      const timelineSteps = document.querySelectorAll('.timeline-step');
+      const whiteboardLabel = document.getElementById('whiteboard-step-label');
+
+      if ('IntersectionObserver' in window && timelineSteps.length > 0) {
+        const stepObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              timelineSteps.forEach((s) => s.classList.remove('active'));
+              entry.target.classList.add('active');
+              const stepTitle = entry.target.getAttribute('data-step-title');
+              if (whiteboardLabel && stepTitle) {
+                whiteboardLabel.textContent = stepTitle;
+              }
+            }
+          });
+        }, {
+          rootMargin: '-25% 0px -45% 0px',
+          threshold: 0.2
+        });
+
+        timelineSteps.forEach((step) => stepObserver.observe(step));
+      }
+
+      // Also allow clicking any step in the timeline to highlight it
+      timelineSteps.forEach((step) => {
+        step.addEventListener('click', () => {
+          timelineSteps.forEach((s) => s.classList.remove('active'));
+          step.classList.add('active');
+          const stepTitle = step.getAttribute('data-step-title');
+          if (whiteboardLabel && stepTitle) {
+            whiteboardLabel.textContent = stepTitle;
+          }
+        });
+      });
+
+      // 4. GSAP Scroll Reveal Animations
+      if (window.gsap && window.ScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray('section h2, #stakes .grid > div, #endorsements .rounded-2xl').forEach((el) => {
+          gsap.fromTo(el,
+            { y: 24, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.65,
+              ease: 'power3.out',
+              scrollTrigger: {
+                trigger: el,
+                start: 'top 88%',
+                toggleActions: 'play none none none'
+              }
+            }
+          );
+        });
+      }
+
+      // 5. Contact Form Submission Handler (No Browser Alert)
+      const contactForm = document.getElementById('devskeen-contact-form');
+      const submitBtn = document.getElementById('contact-submit-btn');
+      const successBanner = document.getElementById('form-success-banner');
+
+      contactForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        const firstName = formData.get('firstName');
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        setTimeout(() => {
+          successBanner.classList.remove('hidden');
+          successBanner.textContent = `Thanks ${firstName}! Your message has been received by the devskeen engineering team. We'll get back to you within 24 hours.`;
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submitted ✓';
+          contactForm.reset();
+        }, 700);
+      });
+    });
+  </script>
+</body>
+</html>
