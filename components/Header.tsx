@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Logo from '@/components/Logo'
 
 export default function Header() {
   return (
@@ -7,13 +7,8 @@ export default function Header() {
 
         {/* Left: Brand + Left-Aligned Navigation */}
         <div className="flex items-center gap-12">
-          <a href="#hero" className="flex items-center gap-2.5 group focus:outline-none" aria-label="devskeen Home">
-            <svg className="w-8 h-8 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 6C6 4.89543 6.89543 4 8 4H16C17.1046 4 18 4.89543 18 6V26C18 27.1046 17.1046 28 16 28H8C6.89543 28 6 27.1046 6 26V6Z" fill="#0D6E52"/>
-              <path d="M15 13C15 11.8954 15.8954 11 17 11H27C28.1046 11 29 11.8954 29 13V30C29 31.1046 28.1046 32 27 32H17C15.8954 32 15 31.1046 15 30V13Z" fill="#34D399"/>
-              <path d="M15 13C15 11.8954 15.8954 11 17 11H18V28H15V13Z" fill="#10B981"/>
-            </svg>
-            <span className="font-display font-bold text-xl tracking-tight text-slate-900">devskeen</span>
+          <a href="#hero" className="group focus:outline-none" aria-label="devskeen Home">
+            <Logo />
           </a>
 
           {/* Left-Aligned Navigation Links */}
