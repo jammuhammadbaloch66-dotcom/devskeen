@@ -2,15 +2,18 @@ import Logo from '@/components/Logo'
 
 export default function Footer() {
   return (
-    <footer className="bg-white pt-10 pb-14 border-t border-slate-100">
+    <footer className="bg-white pt-12 pb-14 border-t border-slate-100">
       <div className="max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12">
 
-        {/* Top Row: Logo Lockup + LinkedIn */}
+        {/* Top Row: Full Devskeen Brand Lockup (Icon + Name + Tagline) + LinkedIn */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-12 border-b border-slate-200/80">
           <a href="#hero" className="group" aria-label="devskeen Home">
             <Logo
-              className="w-14 h-14 sm:w-16 sm:h-16"
-              textClassName="font-display font-bold text-4xl sm:text-5xl tracking-tight text-slate-900"
+              size="lg"
+              showIcon={true}
+              showName={true}
+              showTagline={true}
+              layout="horizontal"
             />
           </a>
 

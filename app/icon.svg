@@ -1,6 +1,77 @@
-<svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M6 6C6 4.89543 6.89543 4 8 4H16C17.1046 4 18 4.89543 18 6V26C18 27.1046 17.1046 28 16 28H8C6.89543 28 6 27.1046 6 26V6Z" fill="#0D6E52"/>
-  <path d="M15 13C15 11.8954 15.8954 11 17 11H27C28.1046 11 29 11.8954 29 13V30C29 31.1046 28.1046 32 27 32H17C15.8954 32 15 31.1046 15 30V13Z" fill="#34D399"/>
-  <path d="M15 13C15 11.8954 15.8954 11 17 11H18V28H15V13Z" fill="#10B981"/>
-</svg>
+<svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dsFaviconGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0080FF" />
+      <stop offset="35%" stop-color="#1B6FFF" />
+      <stop offset="70%" stop-color="#5B2AE5" />
+      <stop offset="100%" stop-color="#841FE8" />
+    </linearGradient>
+  </defs>
 
+  <!-- Left Bracket { -->
+  <path
+    d="M 68 28
+       C 52 28, 48 38, 48 54
+       L 48 82
+       C 48 94, 38 98, 28 100
+       C 38 102, 48 106, 48 118
+       L 48 146
+       C 48 162, 52 172, 68 172"
+    stroke="url(#dsFaviconGrad)"
+    stroke-width="16"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Right Bracket } -->
+  <path
+    d="M 252 28
+       C 268 28, 272 38, 272 54
+       L 272 82
+       C 272 94, 282 98, 292 100
+       C 282 102, 272 106, 272 118
+       L 272 146
+       C 272 162, 268 172, 252 172"
+    stroke="url(#dsFaviconGrad)"
+    stroke-width="16"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Center Eye Almond Shape -->
+  <path
+    d="M 66 100
+       C 95 36, 225 36, 254 100
+       C 225 164, 95 164, 66 100 Z"
+    stroke="url(#dsFaviconGrad)"
+    stroke-width="16"
+    stroke-linejoin="round"
+  />
+
+  <!-- Center Code Tag < / > -->
+  <!-- < -->
+  <path
+    d="M 134 85 L 116 100 L 134 115"
+    stroke="url(#dsFaviconGrad)"
+    stroke-width="12"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- / -->
+  <path
+    d="M 166 78 L 154 122"
+    stroke="url(#dsFaviconGrad)"
+    stroke-width="12"
+    stroke-linecap="round"
+  />
+
+  <!-- > -->
+  <path
+    d="M 186 85 L 204 100 L 186 115"
+    stroke="url(#dsFaviconGrad)"
+    stroke-width="12"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

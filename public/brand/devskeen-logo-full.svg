@@ -1,0 +1,67 @@
+<svg viewBox="0 0 500 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dsFullGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0084FF" />
+      <stop offset="35%" stop-color="#1B6FFF" />
+      <stop offset="70%" stop-color="#5B2AE5" />
+      <stop offset="100%" stop-color="#8225EB" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(90, 20)">
+    <path
+      d="M 68 28 C 52 28, 48 38, 48 54 L 48 82 C 48 94, 38 98, 28 100 C 38 102, 48 106, 48 118 L 48 146 C 48 162, 52 172, 68 172"
+      stroke="url(#dsFullGrad)"
+      stroke-width="16"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <path
+      d="M 252 28 C 268 28, 272 38, 272 54 L 272 82 C 272 94, 282 98, 292 100 C 282 102, 272 106, 272 118 L 272 146 C 272 162, 268 172, 252 172"
+      stroke="url(#dsFullGrad)"
+      stroke-width="16"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <path
+      d="M 66 100 C 95 36, 225 36, 254 100 C 225 164, 95 164, 66 100 Z"
+      stroke="url(#dsFullGrad)"
+      stroke-width="16"
+      stroke-linejoin="round"
+    />
+
+    <path d="M 134 85 L 116 100 L 134 115" stroke="url(#dsFullGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 166 78 L 154 122" stroke="url(#dsFullGrad)" stroke-width="12" stroke-linecap="round" />
+    <path d="M 186 85 L 204 100 L 186 115" stroke="url(#dsFullGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- DEVSKEEN text -->
+  <text
+    x="250"
+    y="255"
+    text-anchor="middle"
+    fill="#121845"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-weight="800"
+    font-size="44"
+    letter-spacing="3"
+  >
+    DEVSKEEN
+  </text>
+
+  <!-- Tagline text -->
+  <text
+    x="250"
+    y="295"
+    text-anchor="middle"
+    fill="#2B3454"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-weight="500"
+    font-size="16"
+    letter-spacing="1"
+  >
+    Stay Keen &bull; Build With DevsKeen
+  </text>
+</svg>
